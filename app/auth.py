@@ -1,9 +1,9 @@
 from jose import jwt
 from jose.exceptions import JWTError
 from datetime import datetime, timedelta, timezone
+from app.config import settings
 
-
-SECRET_KEY = "8421e5bee29cbac54cc771f0ae3c33b926bd0be9db350f47a261826abf1db205"
+SECRET_KEY = settings.SECRET_KEY
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
