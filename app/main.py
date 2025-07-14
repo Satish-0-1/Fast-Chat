@@ -32,6 +32,7 @@ def home_page(request: Request):
 async def websocket_endpoint(websocket: WebSocket):
 
     await connectionmanager.connect(websocket)
+    name="Unknown"
     try:
         while True:
             data = await websocket.receive_text()
